@@ -1,15 +1,30 @@
 {
-  "name": "test-exercize",
-  "version": "1.0.0",
-  "description": "",
+  "name": "trello-challenge",
+  "version": "0.0.1",
+  "description": "Challenge de Trello del LMS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Elizabeth Beatriz Vega Medina",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElizabethVegaM/trello-challenge.git"
+  },
+  "keywords": [
+    "trello"
+  ],
+  "bugs": {
+    "url": "https://github.com/ElizabethVegaM/trello-challenge/issues"
+  },
+  "homepage": "https://github.com/ElizabethVegaM/trello-challenge#readme"
 }

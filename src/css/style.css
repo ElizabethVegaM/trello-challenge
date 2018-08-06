@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+  background-color: #026aa7;
+  color: #fafafa;
+  height: 100vh;
+}
+
+header {
+  height: 5vh;
+  text-align: center;
+  background-color: rgba(0,0,0,.15);
+  padding: 3px;
+  margin: 0 auto;
+}
+
+.dropdown {
+  position: absolute;
+}
+
+header .btn {
+  background-color: hsla(0,0%,100%,.3);
+  padding: 3px 6px;
+  border: none;
+  height: 31px;
+}
+
+.dropdown i {
+  margin-right: 8px;
+}
+
+.input-group {
+  width: 170px;
+  margin-left: 98px;
+}
+
+#search {
+  background-color: hsla(0,0%,100%,.3);
+  border-radius: 3px 0px 0px 3px;
+  border: none;
+  color: hsla(0,0%,100%,.5);
+  font-size: 13px;
+  margin: 0;
+  transition: width .15s;
+  z-index: 1;
+}
+
+#basic-addon2 {
+  padding: 3px 5px;
+  background-color: hsla(0,0%,100%,.3); 
+  border-radius: 0px 3px 3px 0px; 
+}
+
+header img {
+  height: 4vh;
+  opacity: 0.5;
+  margin: -30px 50%;
+}
+
+/* Tablero */
+.board {
+  padding: 15px 0px;
+  text-align: initial;
+}
+
+.board-header {
+  padding: 0px 10px 15px 0px;
+}
+
+.board-header h5, p {
+  display: inline;
+}
+
+.board-header i {
+  color: yellow;
+  margin: 0 10px;
+}
+
+.board-header p {
+  border-left: 1px solid hsla(0,0%,100%,.3);
+  border-right: 1px solid hsla(0,0%,100%,.3);
+  padding: 0 15px;
+}
+
+.board-body button {
+  background-color: hsla(0,0%,100%,.3);
+  border: none;
+  color: #fafafa;
+  width: 100%;
+  text-align: initial;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.board-body button i {
+  margin-right: 10px;
+}
+
+.formContainer {
+  background-color: #e2e4e6;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.formContainer button {
+  margin-top: 7px;
+  background-color: #28a745;
+  width: 120px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#close {
+  background-color: transparent;
+}
