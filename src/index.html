@@ -39,34 +39,62 @@
           <i class="fas fa-search"></i>
       </div>
       <img id="logo" src="img/trello-logo-white-1024x315.png" alt="logo Trello">
+      <div class="button-group">
+        <button class="btn">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button class="btn">
+          <i class="fas fa-info-circle"></i>
+        </button>
+        <button id="notification" class="btn">
+          <i class="far fa-bell"></i>
+        </button>
+        <button class="btn user">
+          <i class="far fa-user-circle"></i>
+        </button>
+      </div>
     </header>
     <section class="board">
-      <div class="board-header">
-        <h5>Nombre tablero</h5>
-        <i class="far fa-star"></i>
-        <p>Personal</p>
+      <div class="board-header row">
+        <button class="btn ">Nombre tablero</button>
+        <button class="btn starBtn">
+          <i class="far fa-star"></i>
+        </button>
+        <div class="vl"></div>
+        <button class="btn">Personal</button>
+        <div class="vl"></div>
+        <button class="btn private">
+          <i class="fas fa-lock"></i>Privado</button>
+        <div class="vl"></div>
+        <button class="btn user-board">
+          <i class="far fa-user-circle"></i>
+        </button>
+        <button class="btn user-board">
+          <i class="fas fa-user-plus"></i>
+        </button>
+        <button id="menu" class="btn private">
+          <i class="fas fa-ellipsis-h"></i>Mostrar menú</button>
       </div>
-      <div class="board-body">
-        <div id="first" class="col-4">
-          <button id="addList" type="button" class="btn btn-light">
+      <div class="board-body row">
+        <div id="first" class="col">
+          <button id="addList" type="button" class="btn">
             <i class="fas fa-plus"></i>Añadir una lista</button>
           <div id="inputList" class="formContainer d-none">
-            <form>
-              <input type="text" class="form-control" id="listText" placeholder="Introduzca el título de la lista">
-              <button type="submit" class="btn btn-success">Añadir lista</button>
-              <button id="close">
-                <i class="fas fa-times"></i>
-              </button>
-            </form>
+            <input type="text" class="form-control" id="listText" placeholder="Introduzca el título de la lista...">
+            <button id="addBtn" type="button" class="btn btn-success" onclick="newList()">Añadir lista</button>
+            <button id="close" class="btn" onclick="close()">
+              <i class="fas fa-times"></i>
+            </button>
           </div>
         </div>
-        <div id="second" class="col-4">
+        <div id="second" class="col">
         </div>
-        <div id="third" class="col-4">
+        <div id="third" class="col">
         </div>
       </div>
     </section>
 
+    
 
 
   </div>
