@@ -82,11 +82,6 @@ header img {
   border-radius: 100%;
 }
 
-#menu {
-  position: absolute;
-  right: 5px;
-}
-
 /* Tablero */
 .board {
   padding: 15px 0px;
@@ -225,4 +220,31 @@ header img {
   float: right;
   margin: 0!important;
   color: #8c8c8c!important;
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 7vh;
+  }
+  #search {
+    display: none;
+  }
+  #info {
+    display: none;
+  }
+  header img {
+    position: absolute;
+    top: 8px;
+    left: 20%;
+  }
+  #basic-addon2 {
+    border-radius: 3px;
+  }  
+}
+
+@media (min-width: 577px) {
+  #menu {
+    position: absolute;
+    right: 5px;
+  }
 }
