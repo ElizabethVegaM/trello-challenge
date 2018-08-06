@@ -48,4 +48,5 @@ function newTask() {
     <i class="fas fa-pen"></i>
     </button>
   </div>` + listBody.innerHTML;
+  inputTask.classList.add('d-none');
 }

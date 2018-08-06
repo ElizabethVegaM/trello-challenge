@@ -215,12 +215,14 @@ header img {
 }
 
 .taskName {
-  background-color: #fafafa;
-  color: #444;
-  padding: 5px 10px;
+  background-color: #fafafa!important;
+  color: #444!important;
+  padding: 5px 10px!important;
+  margin: 5px 0;
 }
 
 .taskName i {
   float: right;
-  margin: 0;
+  margin: 0!important;
+  color: #8c8c8c!important;
 }
