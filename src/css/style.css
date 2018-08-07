@@ -61,7 +61,8 @@ header .btn {
 header img {
   height: 4vh;
   opacity: 0.5;
-  margin-left: 20%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-group {
@@ -151,7 +152,7 @@ header img {
   border-radius: 3px;
 }
 
-#addBtn {
+#addBtn, #addBtn2 {
   margin-top: 7px;
   background-color: #28a745;
   width: 100px;
@@ -160,7 +161,7 @@ header img {
   padding: 8px;
 }
 
-#close, #closeCardBtn {
+#close, #close2, #closeCardBtn, #closeCardBtn2 {
   background-color: transparent;
   width: 35px;
   height: 35px;
@@ -179,13 +180,13 @@ header img {
   padding: 5px 8px 2px;
 }
 
-#listHeader i {
+.listHeader i {
   position: absolute;
   right: 15px;
   top: 10px;
 }
 
-#addTaskBtn {
+#addTaskBtn, #addTaskBtn2 {
   border-radius: 0 0 3px 3px;
   color: #8c8c8c;
   display: block;
@@ -196,7 +197,7 @@ header img {
   user-select: none;
 }
 
-#taskArea {
+textarea {
   border-radius: 3px;
   border: none;
   resize: vertical;
