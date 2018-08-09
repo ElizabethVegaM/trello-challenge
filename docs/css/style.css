@@ -2,13 +2,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+input, textarea {
+  font-size: 14px!important;
+}
+
 .container-fluid {
   background-color: #026aa7;
   color: #fafafa;
   height: 100vh;
+  min-width: 100vw;
 }
 
-.btn:hover {
+.blue-btn:hover {
   background-color: #045f94;
 }
 
@@ -32,6 +37,7 @@ header .btn {
   color: #fafafa;
 }
 
+/*Menú tablero */
 .dropdown i {
   margin-right: 8px;
 }
@@ -39,6 +45,31 @@ header .btn {
 .input-group {
   width: 170px;
   margin-left: 98px;
+}
+
+.boards-drawer {
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,.4);
+  border-radius: 0 3px 3px 0;
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  width: 280px;
+  top: 44px;
+  z-index: 60;
+}
+
+.boards-drawer input {
+  margin: 0 0 6px;
+  padding: 6px;
+  width: 98%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background-color: #e2e4e6;
+  border: 1px solid #cdd2d4;
+  border-radius: 3px;
+  display: block;
 }
 
 #search {
@@ -61,7 +92,9 @@ header .btn {
 header img {
   height: 4vh;
   opacity: 0.5;
-  margin-left: 20%;
+  position: absolute;
+  left: 50%;
+  right: 50%;
 }
 
 .button-group {
@@ -123,35 +156,40 @@ header img {
 }
 
 /* Board body */
-.col {
-  padding: 0 5px 0 5px;
-}
-
-#first {
+.board-body {
+  width: max-content;
   padding-left: 10px;
 }
 
 .board-body .btn {
-  background-color: hsla(0,0%,100%,.3);
   border: none;
   color: #fafafa;
-  width: 100%;
   text-align: initial;
   font-size: 13px;
   padding: 10px;
+}
+
+.add-btn {
+  background-color: rgba(0,0,0,.12);
+  width: 272px;
+  color: hsla(0,0%,100%,.7)!important;
 }
 
 .board-body button i {
   margin-right: 10px;
 }
 
-.formContainer, .listContainer {
-  background-color: #e2e4e6;
+.formContainer {
   padding: 5px;
-  border-radius: 3px;
 }
 
-#addBtn {
+.formContainer, .containers {
+  background-color: #e2e4e6;
+  border-radius: 3px;
+  width: 272px;
+}
+
+.green-btn {
   margin-top: 7px;
   background-color: #28a745;
   width: 100px;
@@ -160,43 +198,56 @@ header img {
   padding: 8px;
 }
 
-#close, #closeCardBtn {
+.green-btn:hover {
+  background-color: #23913c;
+}
+
+.cancel-btn {
   background-color: transparent;
   width: 35px;
   height: 35px;
   font-size: 20px;
-  color: #999;
+  color: #999!important;
   padding-top: 8px;
 }
 
-.listContainer {
+.containers {
   color: #999;
+  margin-right: 8px;
 }
 
-.listContainer h6 {
+.containers h6 {
   color: #333;
   font-weight: 700;
-  padding: 5px 8px 2px;
+  padding: 10px 8px 2px;
 }
 
-#listHeader i {
-  position: absolute;
-  right: 15px;
-  top: 10px;
+.listHeader i {
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
 }
 
-#addTaskBtn {
+.add-task-btn {
+  width: 100%;
   border-radius: 0 0 3px 3px;
-  color: #8c8c8c;
-  display: block;
-  flex: 0 0 auto;
-  padding: 8px 10px;
-  position: relative;
+  background-color: transparent;
+  color: #8c8c8c!important;
   text-decoration: none;
   user-select: none;
 }
 
-#taskArea {
+.add-task-btn:hover {
+  background-color: #cdd2d4;
+  color: #444;
+  text-decoration: underline;
+}
+
+.task {
+  padding: 5px;
+}
+
+textarea {
   border-radius: 3px;
   border: none;
   resize: vertical;
@@ -206,14 +257,15 @@ header img {
   min-height: 50px;
   max-height: 150px;
   box-shadow: 3px 3px 7px -3px rgba(99,99,99,1);
-  font-size: 13px;
 }
 
 .taskName {
+  width: 100%;
   background-color: #fafafa!important;
   color: #444!important;
   padding: 5px 10px!important;
   margin: 5px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,.1);
 }
 
 .taskName i {
@@ -226,6 +278,12 @@ header img {
   header {
     height: 7vh;
   }
+  #dropdownMenuLink {
+    padding: 3px 0px 3px 8px;
+  }
+  .blue-btn span {
+    display: none;
+  }
   #search {
     display: none;
   }
@@ -235,10 +293,13 @@ header img {
   header img {
     position: absolute;
     top: 8px;
-    left: 20%;
+    left: 35%;
   }
   #basic-addon2 {
     border-radius: 3px;
+    padding: 4px 8px;
+    position: absolute;
+    left: -65px;
   }  
 }
 

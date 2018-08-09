@@ -24,13 +24,25 @@
   <div class="container-fluid">
     <header class="row">
       <div class="dropdown">
-        <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fab fa-trello"></i>Tableros
+        <a class="btn blue-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-trello"></i><span>Tableros</span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu boards-drawer" aria-labelledby="dropdownMenuLink">
+          <input class="js-search-boards" type="text" name="search-boards" placeholder="Buscar tableros por nombre…">
+          <div class="boards">
+            <a class="dropdown-item" href="#">
+              <i class="far fa-star"></i>TABLEROS MARCADOS
+              <i class="fas fa-plus"></i>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="far fa-clock"></i>TABLEROS RECIENTES
+              <i class="fas fa-plus"></i>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fab fa-trello"></i>TABLEROS PERSONALES
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="input-group">
@@ -38,15 +50,15 @@
         <span id="basic-addon2">
           <i class="fas fa-search"></i>
       </div>
-      <img id="logo" src="img/trello-logo-white-1024x315.png" alt="logo Trello">
+        <img id="logo" src="img/trello-logo-white-1024x315.png" alt="logo Trello">
       <div class="button-group">
-        <button class="btn">
+        <button class="btn blue-btn">
           <i class="fas fa-plus"></i>
         </button>
-        <button id="info" class="btn">
+        <button id="info" class="btn blue-btn">
           <i class="fas fa-info-circle"></i>
         </button>
-        <button id="notification" class="btn">
+        <button id="notification" class="btn blue-btn">
           <i class="far fa-bell"></i>
         </button>
         <button class="btn user">
@@ -56,50 +68,40 @@
     </header>
     <section class="board">
       <div class="board-header row">
-        <button class="btn ">Nombre tablero</button>
-        <button class="btn starBtn">
+        <button class="btn blue-btn">Nombre tablero</button>
+        <button class="btn starBtn blue-btn">
           <i class="far fa-star"></i>
         </button>
         <div class="vl"></div>
-        <button class="btn">Personal</button>
+        <button class="btn blue-btn">Personal</button>
         <div class="vl"></div>
-        <button class="btn private">
+        <button class="btn private blue-btn">
           <i class="fas fa-lock"></i>Privado</button>
         <div class="vl"></div>
-        <button class="btn user-board">
+        <button class="btn user-board blue-btn">
           <i class="far fa-user-circle"></i>
         </button>
-        <button class="btn user-board">
+        <button class="btn user-board blue-btn">
           <i class="fas fa-user-plus"></i>
         </button>
-        <button id="menu" class="btn private">
+        <button id="menu" class="btn private blue-btn">
           <i class="fas fa-ellipsis-h"></i>Mostrar menú</button>
       </div>
-      <div class="board-body row">
-        <div id="first" class="col">
-          <button id="addList" type="button" class="btn">
+      <div id="boardBody" class="board-body row">
+        <div id="list">
+          <button id="addList" type="button" class="btn add-btn">
             <i class="fas fa-plus"></i>Añadir una lista</button>
           <div id="inputList" class="formContainer d-none">
-            <input type="text" class="form-control" id="listText" placeholder="Introduzca el título de la lista...">
-            <button id="addBtn" type="button" class="btn btn-success" onclick="newList()">Añadir lista</button>
-            <button id="close" class="btn" onclick="closeList()">
+            <input type="text" class="form-control" id="listTitle" placeholder="Introduzca el título de la lista...">
+            <button id="addNewListBtn" type="button" class="btn green-btn">Añadir lista</button>
+            <button id="closeBtn" class="btn cancel-btn">
               <i class="fas fa-times"></i>
             </button>
           </div>
         </div>
-        <div id="second" class="col">
-        </div>
-        <div id="third" class="col">
-        </div>
-        <div id="fourth" class="col">
-        </div>
       </div>
     </section>
   </div>
-
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -107,7 +109,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script src="js/index.js"></script>
+  <script src="js/board.js"></script>
 </body>
 
 </html>
