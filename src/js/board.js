@@ -3,10 +3,10 @@ addList.addEventListener('click', () => {
   addList.classList.add('d-none');
 });
 
+// contador para definir las ids de cada lista
 let counter = 0;
 addNewListBtn.addEventListener('click', () => {
   counter++;
-  // let inputNewList = document.getElementById('listTitle');
   let newContainer = document.createElement('div');
   boardBody.insertBefore(newContainer, list);
   if (listTitle.value.length > 2) {
@@ -16,11 +16,11 @@ addNewListBtn.addEventListener('click', () => {
       <i class="fas fa-ellipsis-h"></i>
     </div>
     <div id="listBody${counter}">
-      <button id="addTaskBtn${counter}" type="button" class="btn"><i class="fas fa-plus"></i>Añada una tarjeta</button>
-      <div id="inputTask${counter}" class="d-none">
+      <button id="addTaskBtn${counter}" type="button" class="btn add-task-btn"><i class="fas fa-plus"></i>Añada una tarjeta</button>
+      <div id="inputTask${counter}" class="task d-none">
         <textarea id="taskArea${counter}" autofocus name="" cols="36" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
-        <button id="addBtn${counter}" type="button" class="btn">Añadir tarjeta</button>
-        <button id="cancelTaskBtn${counter}" class="btn">
+        <button id="addBtn${counter}" type="button" class="btn green-btn">Añadir tarjeta</button>
+        <button id="cancelTaskBtn${counter}" class="btn cancel-btn">
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -33,17 +33,17 @@ addNewListBtn.addEventListener('click', () => {
     const taskContainer = document.getElementById(`inputTask${counter}`);
     const createTask = document.getElementById(`addBtn${counter}`);
     const tasksContainer = document.getElementById(`listBody${counter}`);
+    const cancelTask = document.getElementById(`cancelTaskBtn${counter}`);
+    let newTask = document.getElementById(`taskArea${counter}`);
     addNewTaskBtn.addEventListener('click', () => {
       addNewTaskBtn.classList.add('d-none');
       taskContainer.classList.remove('d-none');
     });
-    createTask.addEventListener('click', () => {
-      let newTask = document.getElementById(`taskArea${counter}`);
-      console.log(newTask.value);    
+    createTask.addEventListener('click', () => {  
       let newTaskContainer = document.createElement('div');
       tasksContainer.insertBefore(newTaskContainer, addNewTaskBtn);
       if (newTask.value.length > 1) {
-        newTaskContainer.innerHTML = `<div>
+        newTaskContainer.innerHTML = `<div class="task">
           <button class="btn taskName">${newTask.value}
             <i class="fas fa-pen"></i>
           </button>
@@ -53,8 +53,11 @@ addNewListBtn.addEventListener('click', () => {
         newTask.value = '';
       }
     });
-
-
+    cancelTask.addEventListener('click', () => {
+      newTask.value = '';
+      taskContainer.classList.add('d-none');
+      addNewTaskBtn.classList.remove('d-none');
+    });
   }
 })
 
@@ -63,7 +66,3 @@ closeBtn.addEventListener('click', () => { // cierra el formulario de agregar li
   inputList.classList.add('d-none');
   addList.classList.remove('d-none');
 });
-
-function newTask() {
-
-}

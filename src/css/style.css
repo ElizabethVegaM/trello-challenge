@@ -2,8 +2,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
-  font-size: 14px;
+input, textarea {
+  font-size: 14px!important;
 }
 
 .container-fluid {
@@ -13,7 +13,7 @@ input {
   min-width: 100vw;
 }
 
-.btn:hover {
+.blue-btn:hover {
   background-color: #045f94;
 }
 
@@ -116,10 +116,6 @@ header img {
 }
 
 /* Tablero */
-.containers {
-  width: 272px;
-}
-
 .board {
   padding: 15px 0px;
   text-align: initial;
@@ -160,35 +156,40 @@ header img {
 }
 
 /* Board body */
-.col {
-  padding: 0 5px 0 5px;
-}
-
-#first {
+.board-body {
+  width: max-content;
   padding-left: 10px;
 }
 
 .board-body .btn {
-  background-color: hsla(0,0%,100%,.3);
   border: none;
   color: #fafafa;
-  width: 100%;
   text-align: initial;
   font-size: 13px;
   padding: 10px;
+}
+
+.add-btn {
+  background-color: rgba(0,0,0,.12);
+  width: 272px;
+  color: hsla(0,0%,100%,.7)!important;
 }
 
 .board-body button i {
   margin-right: 10px;
 }
 
-.formContainer, .containers {
-  background-color: #e2e4e6;
+.formContainer {
   padding: 5px;
-  border-radius: 3px;
 }
 
-#addBtn, #addBtn2 {
+.formContainer, .containers {
+  background-color: #e2e4e6;
+  border-radius: 3px;
+  width: 272px;
+}
+
+.green-btn {
   margin-top: 7px;
   background-color: #28a745;
   width: 100px;
@@ -197,40 +198,53 @@ header img {
   padding: 8px;
 }
 
-#closeBtn, #closeCardBtn {
+.green-btn:hover {
+  background-color: #23913c;
+}
+
+.cancel-btn {
   background-color: transparent;
   width: 35px;
   height: 35px;
   font-size: 20px;
-  color: #999;
+  color: #999!important;
   padding-top: 8px;
 }
 
 .containers {
   color: #999;
+  margin-right: 8px;
 }
 
 .containers h6 {
   color: #333;
   font-weight: 700;
-  padding: 5px 8px 2px;
+  padding: 10px 8px 2px;
 }
 
 .listHeader i {
-  position: absolute;
-  right: 15px;
-  top: 10px;
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
 }
 
-#addTaskBtn, #addTaskBtn2 {
+.add-task-btn {
+  width: 100%;
   border-radius: 0 0 3px 3px;
-  color: #8c8c8c;
-  display: block;
-  flex: 0 0 auto;
-  padding: 8px 10px;
-  position: relative;
+  background-color: transparent;
+  color: #8c8c8c!important;
   text-decoration: none;
   user-select: none;
+}
+
+.add-task-btn:hover {
+  background-color: #cdd2d4;
+  color: #444;
+  text-decoration: underline;
+}
+
+.task {
+  padding: 5px;
 }
 
 textarea {
@@ -243,14 +257,15 @@ textarea {
   min-height: 50px;
   max-height: 150px;
   box-shadow: 3px 3px 7px -3px rgba(99,99,99,1);
-  font-size: 13px;
 }
 
 .taskName {
+  width: 100%;
   background-color: #fafafa!important;
   color: #444!important;
   padding: 5px 10px!important;
   margin: 5px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,.1);
 }
 
 .taskName i {
