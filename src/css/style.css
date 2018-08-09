@@ -278,6 +278,12 @@ textarea {
   header {
     height: 7vh;
   }
+  #dropdownMenuLink {
+    padding: 3px 0px 3px 8px;
+  }
+  .blue-btn span {
+    display: none;
+  }
   #search {
     display: none;
   }
@@ -287,10 +293,13 @@ textarea {
   header img {
     position: absolute;
     top: 8px;
-    left: 20%;
+    left: 35%;
   }
   #basic-addon2 {
     border-radius: 3px;
+    padding: 4px 8px;
+    position: absolute;
+    left: -65px;
   }  
 }
 
