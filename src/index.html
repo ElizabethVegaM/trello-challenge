@@ -27,10 +27,22 @@
         <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fab fa-trello"></i>Tableros
         </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu boards-drawer" aria-labelledby="dropdownMenuLink">
+          <input class="js-search-boards" type="text" name="search-boards" placeholder="Buscar tableros por nombre…">
+          <div class="boards">
+            <a class="dropdown-item" href="#">
+              <i class="far fa-star"></i>TABLEROS MARCADOS
+              <i class="fas fa-plus"></i>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="far fa-clock"></i>TABLEROS RECIENTES
+              <i class="fas fa-plus"></i>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fab fa-trello"></i>TABLEROS PERSONALES
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="input-group">
@@ -38,7 +50,7 @@
         <span id="basic-addon2">
           <i class="fas fa-search"></i>
       </div>
-      <img id="logo" src="img/trello-logo-white-1024x315.png" alt="logo Trello">
+        <img id="logo" src="img/trello-logo-white-1024x315.png" alt="logo Trello">
       <div class="button-group">
         <button class="btn">
           <i class="fas fa-plus"></i>
@@ -75,31 +87,21 @@
         <button id="menu" class="btn private">
           <i class="fas fa-ellipsis-h"></i>Mostrar menú</button>
       </div>
-      <div class="board-body row">
-        <div id="first" class="col">
+      <div id="boardBody" class="board-body row">
+        <div id="list">
           <button id="addList" type="button" class="btn">
             <i class="fas fa-plus"></i>Añadir una lista</button>
           <div id="inputList" class="formContainer d-none">
-            <input type="text" class="form-control" id="listText" placeholder="Introduzca el título de la lista...">
-            <button id="addBtn" type="button" class="btn btn-success" onclick="newList()">Añadir lista</button>
-            <button id="close" class="btn" onclick="closeList()">
+            <input type="text" class="form-control" id="listTitle" placeholder="Introduzca el título de la lista...">
+            <button id="addNewListBtn" type="button" class="btn btn-success">Añadir lista</button>
+            <button id="closeBtn" class="btn">
               <i class="fas fa-times"></i>
             </button>
           </div>
         </div>
-        <div id="second" class="col">
-        </div>
-        <div id="third" class="col">
-        </div>
-        <div id="fourth" class="col">
-        </div>
       </div>
     </section>
   </div>
-
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -107,7 +109,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script src="js/index.js"></script>
+  <script src="js/board.js"></script>
 </body>
 
 </html>
