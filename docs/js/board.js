@@ -17,7 +17,7 @@ addNewListBtn.addEventListener('click', () => {
     </div>
     <div id="listBody${counter}">
       <button id="addTaskBtn${counter}" type="button" class="btn add-task-btn"><i class="fas fa-plus"></i>Añada una tarjeta</button>
-      <div id="inputTask${counter}" class="task d-none">
+      <div id="inputTask${counter}" class="task task-padding d-none">
         <textarea id="taskArea${counter}" autofocus name="" cols="36" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
         <button id="addBtn${counter}" type="button" class="btn green-btn">Añadir tarjeta</button>
         <button id="cancelTaskBtn${counter}" class="btn cancel-btn">
